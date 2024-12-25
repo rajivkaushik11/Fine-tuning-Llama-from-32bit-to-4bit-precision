@@ -1,13 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec 24 23:35:09 2024
-
-@author: 91768
-"""
-
 
 ###!pip install -q accelerate==0.21.0 peft==0.4.0 bitsandbytes==0.40.2 transformers==4.31.0 trl==0.4.7
-
 
 import os
 import torch
@@ -24,10 +16,10 @@ from transformers import (
 from peft import LoraConfig, PeftModel
 from trl import SFTTrainer
 
-# The model that you want to train from the Hugging Face hub
+# The trained model from the Hugging Face hub
 model_name = "NousResearch/Llama-2-7b-chat-hf"
 
-# The instruction dataset to use
+# The instruction dataset 
 dataset_name = "mlabonne/guanaco-llama2-1k"
 
 # Fine-tuned model name
